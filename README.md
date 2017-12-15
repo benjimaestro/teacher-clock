@@ -1,4 +1,7 @@
 # Teacher Clock
+## Download
+https://github.com/benjimaestro/teacher-clock/wiki
+
 ## How to use
 The gray/red button (left) is a toggle switch. It switches between staying on top of all running programs, or acting like a normal program and staying behind focussed windows.
 The red X button is to close the program.
