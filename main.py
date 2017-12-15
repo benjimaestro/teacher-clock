@@ -16,12 +16,12 @@ def topmost():
         root.attributes("-topmost", False)
         topmostTest = False
     else:
-        hide.config(relief=FLAT,bg='gray20',activebackground='gray20')
+        hide.config(relief=FLAT,bg='gray20',activebackground='gray35')
         root.attributes("-topmost", True)
         topmostTest = True
 def closeWindow():
     root.quit()
-hide = Button(root, bg='gray20',width=1,height=1,relief='flat',overrelief='flat',command=topmost)
+hide = Button(root, bg='gray35',width=1,height=1,relief='flat',overrelief='flat',command=topmost)
 #hide.pack(side="left", fill="y")
 hide.grid(row=0,column=0,sticky=N)
 close = Button(root, bg='red',width=1,height=1,relief='flat',overrelief='flat',text='X',fg='white',command=closeWindow)
@@ -134,11 +134,13 @@ def tick():
         currentPeriod = timetable[8][2]
         nextPeriodText = 'End of teaching day'
     else:
-        td = 'End of teaching day'
-        nextPeriodText = ''
+        td = ''
+        nextPeriodText = 'End of teaching day'
     clock.config(text=td)
     if nextPeriodText == '':
         text1 = ''
+    if nextPeriodText == 'End of teaching day':
+        text1 = nextPeriodText
     else:
         text1 = 'Next: '+nextPeriodText
     nextPeriod.config(text=text1)
